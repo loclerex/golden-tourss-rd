@@ -1,0 +1,145 @@
+.hero-carousel-container-css {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    height: 400px; /* Ajusta la altura deseada */
+}
+
+.hero-carousel-css {
+    display: flex;
+    width: 200%; /* Ajusta según el número de imágenes (n * 100%) */
+    animation: slide 10s infinite; /* Nombre de la animación, duración total, bucle infinito */
+}
+
+.carousel-slide-css {
+    min-width: 50%; /* Ajusta según el número de imágenes (100% / n) */
+    height: 100%;
+    
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    height: 400px; /* Aumenta este valor a la altura deseada */
+    margin: 5px;
+}
+}
+
+.hero-text-css {
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente para el texto */
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.hero-text-css h1 {
+    font-size: 3em;
+    margin-bottom: 10px;
+}
+
+/* Definición de la animación */
+@keyframes slide {
+    0% { transform: translateX(0%); }   /* Mostrar la primera imagen */
+    50% { transform: translateX(-50%); } /* Mostrar la segunda imagen */
+    100% { transform: translateX(0%); }  /* Volver a la primera imagen (para el bucle) */
+}
+
+/* Si tienes más de dos imágenes, ajusta los porcentajes y el width de .hero-carousel-css */
+/* Ejemplo para tres imágenes:
+.hero-carousel-css { width: 300%; animation: slide 15s infinite; }
+.carousel-slide-css { min-width: 33.33%; }
+@keyframes slide {
+    0% { transform: translateX(0%); }
+    33.33% { transform: translateX(0%); }
+    66.66% { transform: translateX(-100%); }
+    100% { transform: translateX(-200%); }
+}
+*/
+.hero-carousel-container-css {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    height: 70vh; /* Usando viewport height para que ocupe el 70% de la altura de la pantalla */
+}
+
+.hero-carousel-css {
+    display: flex;
+    width: 200%; /* Ajusta según el número de imágenes */
+    animation: slide 10s infinite;
+}
+
+.carousel-slide-css {
+    min-width: 50%; /* Ajusta según el número de imágenes */
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    padding: 20px; /* Añade un poco de padding interior para el texto */
+    box-sizing: border-box; /* Incluye el padding en el ancho y alto */
+}
+
+.hero-text-css {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center; /* Asegura que el texto esté centrado */
+}
+
+.hero-text-css h1 {
+    font-size: 2.5em; /* Usa unidades relativas */
+    margin-bottom: 10px;
+}
+
+.hero-text-css p {
+    font-size: 1.2em; /* Usa unidades relativas */
+}
+
+.star-rating {
+    font-size: 1.3em; /* Usa unidades relativas */
+    margin-top: 5px;
+}
+
+@keyframes slide {
+    0% { transform: translateX(0%); }
+    50% { transform: translateX(-100%); }
+    100% { transform: translateX(0%); }
+}
+
+/* Media query para pantallas más pequeñas (ejemplo: tablets y móviles) */
+@media (max-width: 768px) {
+    .hero-carousel-container-css {
+        height: 50vh; /* Reduce la altura en pantallas más pequeñas */
+    }
+
+    .hero-text-css h1 {
+        font-size: 2em; /* Reduce el tamaño del título */
+    }
+
+    .hero-text-css p {
+        font-size: 1em; /* Reduce el tamaño del párrafo */
+    }
+
+    .star-rating {
+        font-size: 1.1em; /* Reduce el tamaño del rating */
+    }
+
+    .carousel-slide-css {
+        padding: 10px; /* Reduce el padding en pantallas más pequeñas */
+    }
+}
+
+/* Media query para pantallas aún más pequeñas (ejemplo: móviles) */
+@media (max-width: 480px) {
+    .hero-carousel-container-css {
+        height: 40vh; /* Reduce aún más la altura en móviles */
+    }
+
+    .hero-text-css h1 {
+        font-size: 1.5em; /* Reduce aún más el tamaño del título */
+    }
+}
